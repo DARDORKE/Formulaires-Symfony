@@ -1,5 +1,9 @@
-Vérifiez que vous disposez de la solution de l’exercice précédent et permettez à un utilisateur de :
+Vérifiez que vous disposez de la solution de l'exercice précédent pour implémenter l'affichage du formulaire.
 
-pouvoir spécifier plusieurs adresses e-mails (il faudra aussi modifier votre entité)
+Pour cela vous devrez :
 
-pouvoir ne pas spécifier de date de naissance (regardez bien la documentation pour cela)
+passer le formulaire à la vue
+
+ajouter un bouton de soumission du formulaire
+
+changer les libellés des champs afin de les afficher en français
