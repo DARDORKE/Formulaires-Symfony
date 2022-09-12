@@ -9,4 +9,4 @@ email / string / 255 / non nullable
 birthdate / date / nullable
 
 À partir de cette entité, créez un formulaire UserType en utilisant le composant maker, puis écrivez le code permettant
- de gérer la soumission du formulaire dans votre contrôleur.
+ de gérer la soumisson du formulaire dans votre contrôleur.
