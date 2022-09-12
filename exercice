@@ -1,14 +1,12 @@
-Définissez un formulaire d'enregistrement de compte, en utilisant la méthode recommandée, avec :
+Créez une entité User contenant les propriétés :
 
-un champ pour le nom d'utilisateur
+username / string / 255 / non nullable
 
-un champ pour le mot de passe
+password / string / 255 / non nullable
 
-un champ pour l'adresse e-mail
+email / string / 255 / non nullable
 
-un champ pour la date de naissance
+birthdate / date / nullable
 
-Importez-le ensuite dans votre contrôleur. Apportez un soin particulier à utiliser le type de champ le plus
-adapté à la donnée qui va être saisie.
-
-Pour cela, vous pouvez vous servir de la documentation https://symfony.com/doc/current/reference/forms/types.html
+À partir de cette entité, créez un formulaire UserType en utilisant le composant maker, puis écrivez le code permettant
+ de gérer la soumission du formulaire dans votre contrôleur.
