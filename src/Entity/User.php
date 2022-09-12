@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Array_;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User
@@ -20,8 +21,8 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $email = null;
+    #[ORM\Column]
+    private ?array $emails = [];
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $birthdate = null;
@@ -55,14 +56,14 @@ class User
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getEmails(): ?array
     {
-        return $this->email;
+        return $this->emails;
     }
 
-    public function setEmail(string $email): self
+    public function setEmails(array $emails): self
     {
-        $this->email = $email;
+        $this->emails = $emails;
 
         return $this;
     }

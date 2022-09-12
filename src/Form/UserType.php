@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,8 +18,17 @@ class UserType extends AbstractType
         $builder
             ->add('username')
             ->add('password', PasswordType::class)
-            ->add('email', EmailType::class)
-            ->add('birthdate', BirthdayType::class)
+            ->add('email', CollectionType::class, [
+                'entry_type' => EmailType::class
+            ])
+            ->add('birthdate', BirthdayType::class, [
+                'required' => false,
+                'placeholder' => [
+                    'year' => '',
+                    'month' => '',
+                    'day' => ''
+                ]
+            ])
         ;
     }
 
