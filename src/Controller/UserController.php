@@ -11,10 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-    #[Route('/user', name: 'app_user')]
-    public function index(Request $request): Response
+    #[Route('/', name: 'user')]
+    public function new(Request $request): Response
     {
         $user = new User();
+        $user->setEmails(['']);
 
         $form = $this->createForm(UserType::class, $user);
 
@@ -25,7 +26,7 @@ class UserController extends AbstractController
         }
 
         return $this->render('user/index.html.twig', [
-            'controller_name' => 'UserController',
+            'form' => $form->createView(),
         ]);
     }
 }
