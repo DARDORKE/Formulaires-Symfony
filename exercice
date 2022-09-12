@@ -1,9 +1,21 @@
-Vérifiez que vous disposez de la solution de l'exercice précédent pour implémenter l'affichage du formulaire.
+Pour notre exercice, nous aurons besoin :
 
-Pour cela vous devrez :
+d'une entité correspondant au message de contact contenant un nom, un e-mail, un message,
+ainsi qu'une date d'envoi
 
-passer le formulaire à la vue
+d'afficher un formulaire de contact pour nos utilisateurs en français
 
-ajouter un bouton de soumission du formulaire
+d'enregistrer le tout en base de données
 
-changer les libellés des champs afin de les afficher en français
+de rediriger l'utilisateur vers le formulaire vide avec un message de confirmation d'envoi
+
+Vous pourriez ajouter un peu de style avec le framework Bootstrap, si vous le connaissez déjà,
+et la gestion des thèmes de formulaires.
+
+Défi supplémentaire
+
+Vous devez utiliser les trois commandes suivantes et compléter le code à la main :
+
+php bin/console make:entity
+php bin/console make:form
+php bin/console make:controller
